@@ -38,8 +38,11 @@ public class HW1ScoreAdd : MonoBehaviour
     public void SetValue(int i)
     {
         textMeshPro.text = "+" + i;
+        if (i < 0)
+        {
+            textMeshPro.text = i.ToString(); 
+        }
     }
-
     //Destroys the object after Invoked by Start Method  
     private void Death()
     {

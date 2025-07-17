@@ -19,7 +19,7 @@ public class GeoController : MonoBehaviour
     int variableTwo = 5;
     string str1 = "Hello ";
     public int varOne = 9; // public means it can be acessed and modified by other scripts
-
+    private SpriteRenderer sr;
     int challenge = 3;
 
     private Rigidbody2D rb;
@@ -44,59 +44,70 @@ public class GeoController : MonoBehaviour
          */
 
         variableOne = 5;
-        print(variableTwo +  variableTwo);
+        print(variableTwo + variableTwo);
         Debug.Log(str1 + str2);
         Debug.Log(transform.position);
 
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
 
 
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            sr.color = new Color(1f, 0f, 0f);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            sr.color = new Color(0f, 1f, 0f);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            sr.color = new Color(0f, 0f, 1f);
+        }
+    
+            //runs every frame, like a function, this is where the logic goes
+            //Debug.Log(challenge);
+            //challenge += 1;
 
-        //runs every frame, like a function, this is where the logic goes
-         //Debug.Log(challenge);
-         //challenge += 1;
+            //transform.position += new Vector3(0.005f, 0, 0);
 
-        //transform.position += new Vector3(0.005f, 0, 0);
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                transform.position += new Vector3(0, 1, 0);
+            }
 
-        if (Input.GetKeyDown(KeyCode.W))
-       {
-           transform.position += new Vector3(0, 1, 0);
-       }
+             //if (Input.GetKeyDown(KeyCode.A))
+            // {
+            //    transform.position += new Vector3(-1, 0, 0);
+            // }
 
-       // if (Input.GetKeyDown(KeyCode.A))
-       // {
-       //    transform.position += new Vector3(-1, 0, 0);
-       // }
+            //  if (Input.GetKeyDown(KeyCode.S))
+            //  {
+            //  transform.position += new Vector3(0, -1, 0);
+            //  }
 
-      //  if (Input.GetKeyDown(KeyCode.S))
-      //  {
-          //  transform.position += new Vector3(0, -1, 0);
-      //  }
+             // if (Input.GetKeyDown(KeyCode.D))
+             // {
+             //    transform.position += new Vector3(1, 0, 0);
+            // }
 
-      //  if (Input.GetKeyDown(KeyCode.D))
-      //  {
-       //     transform.position += new Vector3(1, 0, 0);
-       // }
-
-        float xInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(xInput*speed1, rb.velocity.y);
+            float xInput = Input.GetAxis("Horizontal");
+            rb.velocity = new Vector2(xInput * speed1, rb.velocity.y);
 
 
-        //if(Input.GetKeyDown(KeyCode.A))
-        //{
-        //    rb.velocity = new Vector2(-1, rb.velocity.y);
-        //}
+            //if(Input.GetKeyDown(KeyCode.A))
+            //{
+            //    rb.velocity = new Vector2(-1, rb.velocity.y);
+            //}
 
-        //if (Input.GetKeyDown(KeyCode.D))
-        //{
-        //    rb.velocity = new Vector2(1, rb.velocity.y);
-        //}
-    }
+            //if (Input.GetKeyDown(KeyCode.D))
+            //{
+            //    rb.velocity = new Vector2(1, rb.velocity.y);
+            //}
+        }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -112,7 +123,7 @@ public class GeoController : MonoBehaviour
                     SceneManager.LoadScene(thisLevel);
                     break;
                 }
-            case "finish":
+            case "Finish":
                 {
                     SceneManager.LoadScene(nextlevel);
                     break;
@@ -120,3 +131,6 @@ public class GeoController : MonoBehaviour
         }
     }
 }
+  
+
+
