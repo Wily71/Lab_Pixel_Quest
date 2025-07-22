@@ -19,8 +19,8 @@ public class HW2PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        _xSpeed = Input.GetAxis("Horizontal");
-        _ySpeed = Input.GetAxis("Vertical");
+        _xSpeed = Input.GetAxis(InputX);
+        _ySpeed = Input.GetAxis(InputY);
 
         _rigidbody2D.velocity = new Vector2(_xSpeed, _ySpeed) * speed; 
     }
