@@ -747,11 +747,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c66c7ca3bd63a0438eabad9f4d61523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7854287240566403132, guid: 1ea6bd9350d50894899d6d0e9622592e, type: 3}
+  preFab: {fileID: 0}
   bulletTrash: {fileID: 1629114352}
   bulletSpawn: {fileID: 1442179157}
-  prefab2: {fileID: 7854287240566403132, guid: 8dbded837488444448e1d9a4318510af, type: 3}
-  bullet1: {fileID: 0}
 --- !u!1 &396652744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,15 +1137,15 @@ RectTransform:
   m_GameObject: {fileID: 997040337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0917, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1884140214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 20.8894, y: -29.115993}
-  m_SizeDelta: {x: 669.7844, y: 412.9228}
+  m_AnchoredPosition: {x: -1.255, y: 3.7651}
+  m_SizeDelta: {x: 710.3531, y: 374.0022}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &997040339
 MonoBehaviour:
@@ -1973,7 +1971,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1723537626, guid: 08feec22993782742a73cc25b3a3bb99, type: 3}
+  m_Sprite: {fileID: -1034160623, guid: 08feec22993782742a73cc25b3a3bb99, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2440,8 +2438,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: 30.2564}
-  m_SizeDelta: {x: 60, y: 39.4873}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1943639705
 GameObject:

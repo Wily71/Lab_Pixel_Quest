@@ -37,12 +37,14 @@ public class HW1ScoreAdd : MonoBehaviour
     //Used by End Goals to set the value that will be shown in the text
     public void SetValue(int i)
     {
-        textMeshPro.text = "+" + i;
-        if (i < 0)
-        {
-            textMeshPro.text = i.ToString(); 
+        if (i >= 0) {
+            textMeshPro.text = "+" + i;
+        }
+        else {
+            textMeshPro.text = i.ToString();
         }
     }
+
     //Destroys the object after Invoked by Start Method  
     private void Death()
     {

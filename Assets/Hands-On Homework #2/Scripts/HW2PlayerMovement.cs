@@ -11,7 +11,6 @@ public class HW2PlayerMovement : MonoBehaviour
 
     private string InputX = "Horizontal";
     private string InputY = "Vertical";
-
     private void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -22,6 +21,6 @@ public class HW2PlayerMovement : MonoBehaviour
         _xSpeed = Input.GetAxis(InputX);
         _ySpeed = Input.GetAxis(InputY);
 
-        _rigidbody2D.velocity = new Vector2(_xSpeed, _ySpeed) * speed; 
+        _rigidbody2D.velocity = new Vector2(_xSpeed, _ySpeed) * speed;
     }
 }
